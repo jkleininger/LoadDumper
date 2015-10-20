@@ -1,8 +1,8 @@
-package net.qrab.loaddumper.desktop;
+package net.qrab.lmnotruckers.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import net.qrab.loaddumper.LoadDumperGame;
+import net.qrab.lmnotruckers.ElementalTruckersGame;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
@@ -11,6 +11,6 @@ public class DesktopLauncher {
 		config.height = 800;
 		config.width  = 480;
 
-		new LwjglApplication(new LoadDumperGame(), config);
+		new LwjglApplication(new ElementalTruckersGame(), config);
 	}
 }

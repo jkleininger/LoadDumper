@@ -1,4 +1,4 @@
-package net.qrab.loaddumper.handlers;
+package net.qrab.lmnotruckers.handlers;
 
 public abstract class Config {
 
