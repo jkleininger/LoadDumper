@@ -47,16 +47,10 @@ public class GridStage extends Stage {
 		tiledMapRenderer = new OrthogonalTiledMapRenderer(tiledMap);
 		Gdx.input.setInputProcessor(this);
 
-		layer = (TiledMapTileLayer) tiledMap.getLayers().get(0);
+		layer = (TiledMapTileLayer) tiledMap.getLayers().get("map");
 
 		cols = layer.getWidth();
 		rows = layer.getHeight();
-
-		int ctmp = 3;
-		int rtmp = 3;
-		char dtmp = 'W';
-		String ptmp = canMove(dtmp, ctmp, rtmp)?" ":" not ";
-		System.out.println("from [" + ctmp + "," + rtmp + "] it is" + ptmp + "possible to move toward " + dtmp + ".");
 
 	}
 
@@ -74,6 +68,7 @@ public class GridStage extends Stage {
 		return "";
 	}
 
+	@Override
 	public void draw() {
 		camera.update();
 		tiledMapRenderer.setView(camera);
