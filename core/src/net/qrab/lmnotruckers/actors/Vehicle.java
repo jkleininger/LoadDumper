@@ -12,7 +12,9 @@ public class Vehicle extends Actor {
 
 	public Vehicle() {
 		super();
-		setBounds(sprite.getX(), sprite.getY(), sprite.getWidth(), sprite.getHeight());
+		//setBounds(sprite.getX(), sprite.getY(), sprite.getWidth(), sprite.getHeight());
+		setBounds(0,0,1,1);
+		sprite.setSize(1,1);
 		System.out.println(this.sprite.getBoundingRectangle());
 	}
 
