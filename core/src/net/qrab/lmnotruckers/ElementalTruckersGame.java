@@ -3,6 +3,8 @@ package net.qrab.lmnotruckers;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.input.GestureDetector;
+import net.qrab.lmnotruckers.handlers.InProc;
 import net.qrab.lmnotruckers.screens.PlayScreen;
 
 public class ElementalTruckersGame extends Game {
@@ -11,6 +13,8 @@ public class ElementalTruckersGame extends Game {
 	public void create() {
 		Gdx.gl.glEnable(GL20.GL_BLEND);
 		Gdx.gl.glBlendFunc(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
+		Gdx.input.setInputProcessor(new GestureDetector(new InProc()));
+
 		setScreen(new PlayScreen(this));
 	}
 
